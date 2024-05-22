@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Exercises2.css" />
+  </head>
+  <body>
+    <div class="winning">
+      <img src="output-onlinegiftools.gif" class="winningImage" />
+      Congratz you've won the game!
+      <div class="resetContainer">
+        <button class="resetButtonW">Continue/Reset</button>
+      </div>
+    </div>
+    <div class="lossing">
+      Unfortunately you've lost the game :(
+      <div class="resetContainer">
+        <button class="resetButtonL">Reset & Continue</button>
+      </div>
+    </div>
+    <main class="hidden main">
+      <nav>Rock Paper & Scissors game</nav>
+      <section>
+        <div class="me">
+          <div class="border">You</div>
+          <div class="myWins">0</div>
+        </div>
+        <span class="upperText"
+          >Who Will Win?<br /><span class="lowerText"
+            >Score 3 to win the game</span
+          ></span
+        >
+        <div class="me">
+          <div class="border">Computer</div>
+          <div class="compWins">0</div>
+        </div>
+      </section>
+      <article class="article">
+        <h1 class="win loss result animation"></h1>
+        <div class="playing"></div>
+      </article>
+      <footer>
+        <img class="rock" src="rock.svg" alt="" />
+        <img class="paper" src="paper.svg" alt="" />
+        <img class="scissors" src="scissors.svg" alt="" />
+      </footer>
+      <div class="resetContainer">
+        <button class="resetButton">Reset Your Score</button>
+      </div>
+    </main>
+    <script src="exercises2.js"></script>
+  </body>
+</html>

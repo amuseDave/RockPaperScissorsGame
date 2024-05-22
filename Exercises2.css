@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Tilt+Neon&display=swap");
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(2, 0, 12);
+  font-family: "Tilt Neon", sans-serif;
+  font-size: 2rem;
+  user-select: none;
+  overflow-x: hidden;
+}
+main {
+  display: none;
+}
+.hidden {
+  display: block;
+}
+.winning,
+.lossing {
+  display: none;
+  color: white;
+  font-size: 4rem;
+}
+.winning {
+  text-shadow: 0px 0px 10px rgb(0, 243, 41);
+}
+.lossing {
+  text-shadow: 0px 0px 10px rgb(240, 28, 0);
+}
+
+.visibleL,
+.visibleW {
+  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 90svh;
+  animation: textBiggerWithOpacity 1s ease-in-out forwards;
+}
+@keyframes textBiggerWithOpacity {
+  0% {
+    opacity: 0;
+    font-size: 0.5rem;
+  }
+  100% {
+    opacity: 1;
+    font-size: 4rem;
+  }
+}
+@keyframes resetWinOrLooseButton {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.resetbuttonL,
+.resetbuttonW {
+  animation: resetWinOrLooseButton 3s ease-in-out forwards;
+}
+nav {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(0, 140, 255);
+  border-bottom: 1px solid rgb(0, 89, 255);
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgb(245, 240, 240);
+  text-shadow: 0px 0px 10px rgb(0, 140, 255);
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
+  width: 100svw;
+  height: 15svh;
+}
+
+.me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 2.9rem;
+  width: 200px;
+}
+.border {
+  border-bottom: 2px solid rgb(255, 255, 255);
+  border-width: 2px;
+}
+span {
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+article {
+  height: 50svh;
+}
+
+footer {
+  height: 20svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 100px;
+  height: 100px;
+  border: 4px solid white;
+  box-shadow: 0px 0px 10px rgb(0, 153, 255);
+  border-radius: 1000px;
+  padding: 20px;
+  cursor: pointer;
+  margin: 0px 30px;
+  opacity: 50%;
+  transition: all;
+  transition-duration: 300ms;
+}
+
+footer .rock:hover,
+footer .paper:hover {
+  opacity: 100%;
+  transform: rotate(90deg);
+}
+footer .scissors {
+  transform: rotateY(180deg) rotate(80deg);
+}
+
+footer .scissors:hover {
+  transform: rotateY(180deg);
+  opacity: 100%;
+}
+
+.paper1,
+.rock1 {
+  transform: rotate(90deg);
+}
+.scissors1 {
+  transform: rotateY(180deg);
+}
+
+.comp {
+  transform: rotateX(-180deg) rotate(-90deg);
+}
+
+.scissorsComp {
+  transform: rotate(0deg);
+}
+
+.playing img {
+  width: 300px;
+  height: 300px;
+  margin: 0px 30px;
+  opacity: 98%;
+}
+
+.playing .diff2,
+.playing .diff3 {
+  animation: scaleAndFadeIn 0.3s ease forwards;
+}
+
+.slowmotion {
+  animation: scaleAndFadeIn2 3.5s ease forwards;
+}
+
+@keyframes scaleAndFadeIn {
+  0% {
+    opacity: 0;
+    width: 100px;
+  }
+  100% {
+    opacity: 1;
+    width: 360px;
+  }
+}
+@keyframes scaleAndFadeIn2 {
+  0% {
+    opacity: 0;
+    width: 100px;
+  }
+  100% {
+    opacity: 1;
+    width: 360px;
+  }
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+article h1 {
+  color: white;
+  text-shadow: 0px 0px 10px rgb(0, 132, 255);
+  font-weight: 900;
+}
+
+.win {
+  color: rgb(0, 255, 0);
+  text-shadow: 0px 0px 10px green;
+}
+.loss {
+  color: red;
+  text-shadow: 0px 0px 10px red;
+}
+
+.resetbutton,
+.resetbuttonW,
+.resetbuttonL {
+  padding: 10px 20px;
+  font-size: 2rem;
+  background-color: rgba(255, 255, 255, 0.589);
+  box-shadow: 0px 0px 10px rgb(131, 131, 131);
+  color: rgba(0, 0, 0, 0.555);
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.479);
+  opacity: 0.6;
+  margin-top: 10px;
+  border: none;
+  font-weight: 700;
+  font-family: "Tilt Neon", sans-serif;
+  cursor: pointer;
+  transition: all;
+  transition-duration: 0.5s;
+}
+
+.resetContainer {
+  display: flex;
+  width: 100svw;
+  justify-content: center;
+}
+
+.lowerText {
+  font-size: 1rem;
+}
+
+.resetbutton:hover,
+.resetbuttonW:hover,
+.resetbuttonL:hover {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0);
+  opacity: 1;
+}
+
+.winningImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100svw;
+  height: 100svh;
+  opacity: 1;
+  filter: brightness(100%) blur(5px) grayscale(80%);
+}
+
+@media screen and (max-width: 700px) {
+  .uppertext {
+    font-size: 2.5rem;
+  }
+  .lowerText {
+    font-size: 0.95rem;
+  }
+  .me {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .uppertext {
+    font-size: 2rem;
+  }
+  .lowerText {
+    font-size: 0.85rem;
+  }
+  .me {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .uppertext {
+    font-size: 1.5rem;
+  }
+  .lowerText {
+    font-size: 0.75rem;
+  }
+  .me {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 660px) {
+  footer img {
+    width: 90px;
+    height: 90px;
+    padding: 15px;
+    margin: 0px 15px;
+  }
+}
+@media screen and (max-width: 475px) {
+  footer img {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    margin: 0px 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer img {
+    width: 70px;
+    height: 70px;
+    padding: 7px;
+    margin: 0px 7px;
+  }
+}
+@media screen and (max-width: 900px) {
+  @keyframes scaleAndFadeIn3 {
+    0% {
+      opacity: 0;
+      width: 100px;
+    }
+    100% {
+      opacity: 1;
+      width: 280px;
+    }
+  }
+  .playing img {
+    width: 280px;
+    height: 280px;
+    margin: 0px 20px;
+  }
+  .playing .diff2,
+  .playing .diff3 {
+    animation: scaleAndFadeIn3 0.3s ease forwards;
+  }
+
+  .slowmotion {
+    animation: scaleAndFadeIn3 3.5s ease forwards;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  @keyframes scaleAndFadeIn4 {
+    0% {
+      opacity: 0;
+      width: 100px;
+    }
+    100% {
+      opacity: 1;
+      width: 220px;
+    }
+  }
+  .playing img {
+    width: 220px;
+    height: 220px;
+    margin: 0px 20px;
+  }
+  .playing .diff2,
+  .playing .diff3 {
+    animation: scaleAndFadeIn4 0.3s ease forwards;
+  }
+
+  .slowmotion {
+    animation: scaleAndFadeIn4 3.5s ease forwards;
+  }
+}
+@media screen and (max-width: 540px) {
+  @keyframes scaleAndFadeIn5 {
+    0% {
+      opacity: 0;
+      width: 100px;
+    }
+    100% {
+      opacity: 1;
+      width: 180px;
+    }
+  }
+  .playing img {
+    width: 180px;
+    height: 180px;
+    margin: 0px 15px;
+  }
+  .playing .diff2,
+  .playing .diff3 {
+    animation: scaleAndFadeIn5 0.3s ease forwards;
+  }
+
+  .slowmotion {
+    animation: scaleAndFadeIn5 3.5s ease forwards;
+  }
+}
+
+.lossing {
+  text-align: center;
+}
+.winning {
+  text-align: center;
+}
+@media screen and (max-width: 430px) {
+  @keyframes scaleAndFadeIn6 {
+    0% {
+      opacity: 0;
+      width: 100px;
+    }
+    100% {
+      opacity: 1;
+      width: 140px;
+    }
+  }
+  .playing img {
+    width: 140px;
+    height: 140px;
+    margin: 0px 10px;
+  }
+  .playing .diff2,
+  .playing .diff3 {
+    animation: scaleAndFadeIn6 0.3s ease forwards;
+  }
+
+  .slowmotion {
+    animation: scaleAndFadeIn6 3.5s ease forwards;
+  }
+}
