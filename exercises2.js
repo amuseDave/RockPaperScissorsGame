@@ -77,9 +77,6 @@ function playGame() {
     document.querySelector(".diff1").classList.remove("diff3");
     document.querySelector(".diff").classList.remove("diff2");
     setTimeout(() => {
-      document
-        .querySelector(".amuse-dave-portfolio")
-        .classList.add("hidden-port");
       resetScore();
     }, 2000);
   }
@@ -90,9 +87,6 @@ function playGame() {
     compWins.innerHTML = `${result.loss}`;
     document.querySelector(".main").classList.add("hidden");
     document.querySelector(".winning").classList.remove("visibleW");
-    document
-      .querySelector(".amuse-dave-portfolio")
-      .classList.remove("hidden-port");
   });
   document.querySelector(".resetButtonL").addEventListener("click", () => {
     resetScore();
@@ -100,9 +94,6 @@ function playGame() {
     compWins.innerHTML = `${result.loss}`;
     document.querySelector(".main").classList.add("hidden");
     document.querySelector(".lossing").classList.remove("visibleL");
-    document
-      .querySelector(".amuse-dave-portfolio")
-      .classList.remove("hidden-port");
   });
   localStorage.setItem("score", JSON.stringify(result));
 }
