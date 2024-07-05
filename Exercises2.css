@@ -72,6 +72,7 @@ nav {
 
 section {
   display: flex;
+  position: absolute;
   flex-direction: row;
   align-items: center;
   color: rgb(245, 240, 240);
@@ -434,5 +435,56 @@ article h1 {
 
   .slowmotion {
     animation: scaleAndFadeIn6 3.5s ease forwards;
+  }
+}
+section {
+  z-index: 200 !important;
+}
+.amuse-dave-portfolio p {
+  margin: 0;
+  font-size: 1.5rem;
+  color: azure;
+  text-shadow: 0px 0px 5px rgb(0, 140, 255);
+  padding: 0;
+  text-align: center;
+}
+.amuse-dave-portfolio {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  cursor: pointer;
+  top: 165px;
+  height: 75px;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  left: 0px;
+  color: white;
+}
+.amuse-dave-portfolio span {
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(53, 164, 255);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+.pointer {
+  position: absolute;
+  bottom: -23px;
+  right: 0;
+  z-index: 100;
+}
+.hidden-port {
+  display: none;
+}
+
+.p-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 395px) {
+  .amuse-dave-portfolio {
+    top: 200px;
   }
 }
